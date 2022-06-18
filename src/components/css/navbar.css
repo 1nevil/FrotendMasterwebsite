@@ -1,0 +1,130 @@
+.nav_header {
+  height: 3.5rem;
+  display: flex;
+  background-color: rgba(57, 9, 201, 0.969);
+  align-items: center;
+  /* color: black; */
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+}
+.logo_section {
+  height: 100%;
+  /* padding: 2rem; */
+  letter-spacing: 1px;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  cursor: pointer;
+  font-size: 2rem;
+  color: rgb(254, 254, 254);
+}
+.navbar_section {
+  flex: 10;
+  height: 100%;
+  display: flex;
+  margin-right: 3rem;
+}
+.nav_item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 2;
+  list-style: none;
+}
+.nav_item > li {
+  margin: 1.5rem;
+}
+.nav_item > li > .navLink {
+  text-decoration: None;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  padding: 0.5rem 0rem;
+  /* background-color: aqua; */
+  position: relative;
+}
+.navLink::after {
+  content: "";
+  background-color: rgb(96, 185, 240);
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+  transition: 0.4s;
+}
+.navLink:hover::after {
+  width: 100%;
+}
+/* .nav_item > li:hover {
+  border-bottom: 2px solid red;
+} */
+.toggal-button {
+  display: none;
+}
+@media (max-width: 880px) {
+  .nav_header {
+    margin-top: 0rem;
+  }
+
+  .logo_section {
+    flex: 100%;
+    justify-content: flex-start;
+    margin: 0 0 0 1rem;
+  }
+  .navbar_section {
+    position: absolute;
+    top: 0;
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+    width: 100%;
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999;
+  }
+  .nav_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: rgb(1, 1, 17);
+  }
+  .toggal-button {
+    display: block;
+    height: 2rem;
+    width: 3rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    color: white;
+  }
+  .nav_item > li > a {
+    z-index: 23;
+    color: rgb(178, 183, 183);
+    font-size: 1.5rem;
+  }
+  .menu-icon {
+    font-size: 2rem;
+    display: none;
+    color: rgb(255, 255, 255);
+  }
+  .active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu-cross {
+    display: none;
+  }
+  .activemenu {
+    display: block;
+    font-size: 2rem;
+  }
+}
