@@ -1,5 +1,5 @@
 .main_Container {
-  height: clamp(20vh, 130vh, 150vh);
+  height: clamp(20rem, 40rem, 50rem);
   /* background-color: black; */
   display: flex;
   flex-direction: row;
@@ -20,7 +20,7 @@
   max-width: 40rem;
   /* overflow: hidden; */
   background-color: #fff;
-  padding: 3rem 3rem;
+  padding: 1.7rem 1.7rem;
   z-index: 1;
   flex-shrink: 3;
   transform: translate(-5%, 30%);
@@ -45,6 +45,7 @@ p {
 @media (max-width: 600px) {
   .main_Container {
     flex-direction: column;
+    margin-bottom: 1rem;
   }
   .main_image {
     transform: translate(0%);
